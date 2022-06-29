@@ -26,7 +26,7 @@
     chdir: "{{ WORKSPACE_ROOT }}"
   
 - name: caret (install some packages for build)
- apt:
+  apt:
     name:
       - ros-{{ rosdistro }}-osrf-testing-tools-cpp
       - ros-{{ rosdistro }}-performance-test-fixture
@@ -34,7 +34,7 @@
       - ros-{{ rosdistro }}-test-msgs
       - ros-{{ rosdistro }}-cyclonedds
   become: true
-  
+
 - name: caret (install python module)
   pip:
     requirements: "{{ requirements_path }}"
